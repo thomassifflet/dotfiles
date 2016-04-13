@@ -1,0 +1,9 @@
+# Normal Mac crap
+.DS_Store
+
+# Only keep Sublime Text settings
+sublime_text_packages/User/*
+!sublime_text_packages/User/*.sublime-settings
+sublime_text_packages/*
+!sublime_text_packages/User
+!sublime_text_packages/*.sublime-settings

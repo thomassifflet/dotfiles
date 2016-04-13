@@ -1,0 +1,17 @@
+{
+	"bootstrapped": true,
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"Babel",
+		"EditorConfig",
+		"Git Config",
+		"GitGutter",
+		"Package Control",
+		"Seti_UI",
+		"SublimeLinter",
+		"SublimeLinter-contrib-eslint"
+	]
+}

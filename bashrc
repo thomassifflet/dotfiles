@@ -8,17 +8,6 @@ export TERM=xterm-256color
 alias c="clear"
 alias ll="ls -la"
 
-function dmoff() {
-  if [ "$1" = "start" ]; then
-    docker-machine start office
-    eval $(docker-machine env --no-proxy office)
-  elif [ "$1" = "stop" ]; then
-    docker-machine stop office
-  else
-    echo "You have to enter start or stop, jackass!"
-  fi
-}
-
 function take() {
   mkdir $1
   cd $1
@@ -52,7 +41,7 @@ function proxy() {
 }
 
 # Load nvm
-export NVM_DIR="/Users/kon8883/.nvm"
+export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # Load bash completion
@@ -64,3 +53,6 @@ fi
 export DOCKER_COMPLETION_SHOW_NETWORK_IDS="no"
 export DOCKER_COMPLETION_SHOW_IMAGE_IDS="no"
 export DOCKER_COMPLETION_SHOW_TAGS="yes"
+
+# Customize prompt
+export PS1='\u:\W$(__docker_machine_ps1 " [%s]") $>'

@@ -7,4 +7,7 @@ ln -s $DOTFILES_DIR/bash_profile ~/.bash_profile
 ln -s $DOTFILES_DIR/bashrc ~/.bashrc
 ln -s $DOTFILES_DIR/gitconfig ~/.gitconfig
 
+echo "Symlinking Sublime Text Packages so Sublime Text can find them..."
+ln -sF $DOTFILES_DIR/sublime_text_packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
+
 echo "Your computer is setup!"
