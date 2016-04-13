@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+DOTFILES_DIR=$(pwd)
+
+echo "Symlinking dotfiles to home directory..."
+ln -s $DOTFILES_DIR/bash_profile ~/.bash_profile
+ln -s $DOTFILES_DIR/bashrc ~/.bashrc
+ln -s $DOTFILES_DIR/gitconfig ~/.gitconfig
+
+echo "Your computer is setup!"

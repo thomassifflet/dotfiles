@@ -1,0 +1,11 @@
+[user]
+	email = alex.sears@kroger.com
+	name = Alex Sears
+[alias]
+	aa = add --all
+	com = commit -m
+	p = push
+	pullr = pull --rebase
+	subup = submodule update --remote
+	subp = push --recurse-submodules=on-demand
+	st = status
