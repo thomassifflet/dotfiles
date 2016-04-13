@@ -9,3 +9,5 @@
 	subup = submodule update --remote
 	subp = push --recurse-submodules=on-demand
 	st = status
+[ui]
+	colors = true
