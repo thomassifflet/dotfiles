@@ -5,12 +5,19 @@
 	],
 	"installed_packages":
 	[
+		"AdvancedNewFile",
 		"Babel",
 		"EditorConfig",
+		"Emmet",
 		"Git Config",
 		"GitGutter",
+		"HTMLBeautify",
+		"JavaScript & NodeJS Snippets",
+		"Javascript Beautify",
+		"Markdown Extended",
 		"Package Control",
 		"Seti_UI",
+		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint"
 	]
