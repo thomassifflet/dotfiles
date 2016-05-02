@@ -9,5 +9,16 @@
 	subup = submodule update --remote
 	subp = push --recurse-submodules=on-demand
 	st = status
+	co = checkout
+	br = branch
+	f = fetch -pv
 [ui]
 	colors = true
+[core]
+	excludesfile = /Users/kon8883/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -7,42 +7,22 @@ export TERM=xterm-256color
 # Functions and aliases
 alias c="clear"
 alias ll="ls -la"
+alias dm="docker-machine"
+alias dc="docker-compose"
 
 function take() {
   mkdir $1
   cd $1
 }
 
-# Configure proxy when at work
-function proxy() {
-  if [ -z "$http_proxy" ]; then
-    SERVER=localhost
-    PORT=3128
-    export http_proxy="http://$SERVER:$PORT/"
-    export https_proxy=$http_proxy
-    export ftp_proxy=$http_proxy
-    export rsync_proxy=$http_proxy
-    export HTTP_PROXY=$http_proxy
-    export HTTPS_PROXY=$http_proxy
-    export FTP_PROXY=$http_proxy
-    export RSYNC_PROXY=$http_proxy
-    echo -e "Proxy environment variables set."
-  else
-    unset http_proxy
-    unset https_proxy
-    unset ftp_proxy
-    unset rsync_proxy
-    unset HTTP_PROXY
-    unset HTTPS_PROXY
-    unset FTP_PROXY
-    unset RSYNC_PROXY
-    echo -e "Proxy environment variables removed."
-  fi
-}
+# Load computer specific setup
+if [ -f $HOME/.bash_local ]; then
+  . $HOME/.bash_local
+fi
 
 # Load nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+. "$(brew --prefix nvm)/nvm.sh"
 
 # Load bash completion
 if [ -f $(brew --prefix)/etc/bash_completion ]; then
