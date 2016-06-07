@@ -43,7 +43,7 @@
 	"caret_extra_width": 0,
 	"caret_style": "smooth",
 	"close_windows_when_empty": false,
-	"color_scheme": "Packages/User/SublimeLinter/brogrammer (SL).tmTheme",
+	"color_scheme": "Packages/User/SublimeLinter/FireCode (SL).tmTheme",
 	"copy_with_empty_selection": true,
 	"create_window_at_startup": true,
 	"default_encoding": "UTF-8",
@@ -161,6 +161,6 @@
 	"use_simple_full_screen": false,
 	"use_tab_stops": true,
 	"word_separators": "./\\()\"'-:,.;<>~!@#$%^&*|+=[]{}`~?",
-	"word_wrap": "auto",
-	"wrap_width": 0
+	"word_wrap": true,
+	"wrap_width": 100
 }
