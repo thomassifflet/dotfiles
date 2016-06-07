@@ -22,6 +22,7 @@ echo "Symlinking dotfiles to home directory..."
 ln -s $DOTFILES_DIR/bash_profile $HOME/.bash_profile
 ln -s $DOTFILES_DIR/bashrc $HOME/.bashrc
 ln -s $DOTFILES_DIR/gitconfig $HOME/.gitconfig
+ln -s $DOTFILES_DIR/gemrc $HOME/.gemrc
 
 if [ -f $DOTFILES_DIR/bash_local ]; then
   ln -s $DOTFILES_DIR/bash_local $HOME/.bash_local

@@ -29,6 +29,11 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
   . $(brew --prefix)/etc/bash_completion
 fi
 
+# Load rbenv
+if [ -e "/usr/local/bin/rbenv" ] ; then
+  eval "$(rbenv init -)"
+fi
+
 # Configure Docker bash completion
 export DOCKER_COMPLETION_SHOW_NETWORK_IDS="no"
 export DOCKER_COMPLETION_SHOW_IMAGE_IDS="no"
