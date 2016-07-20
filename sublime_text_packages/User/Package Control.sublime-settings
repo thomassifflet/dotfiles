@@ -19,12 +19,14 @@
 		"Markdown Extended",
 		"NodeRequirer",
 		"Package Control",
+		"Pug",
 		"Rust",
 		"SCSS",
 		"Seti_UI",
 		"SideBarEnhancements",
 		"SublimeLinter",
 		"SublimeLinter-contrib-eslint",
-		"TOML"
+		"TOML",
+		"Vue Syntax Highlight"
 	]
 }

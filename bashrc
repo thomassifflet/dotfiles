@@ -4,9 +4,15 @@ export CLICOLOR=1
 # Set colors to match iTerm2 Terminal Colors
 export TERM=xterm-256color
 
+# Set colors for ls
+export LSCOLORS=ExFxBxDxCxegedabagacad
+
+# Set language
+export LANG="en_US.UTF-8"
+
 # Functions and aliases
 alias c="clear"
-alias ll="ls -la"
+alias ll="ls -GFalh"
 alias dm="docker-machine"
 alias dc="docker-compose"
 
@@ -40,4 +46,5 @@ export DOCKER_COMPLETION_SHOW_IMAGE_IDS="no"
 export DOCKER_COMPLETION_SHOW_TAGS="yes"
 
 # Customize prompt
-export PS1='\u:\W$(__docker_machine_ps1 " [%s]") $>'
+# export PS1='\u:\W$(__docker_machine_ps1 " [%s]") $>'
+export PS1='\u:\W $>'
