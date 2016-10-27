@@ -1,4 +1,4 @@
 {
-  "elm_format_on_save": false,
+  "elm_format_on_save": true,
   "elm_paths": "/usr/local/bin:/Users/kon8883/.nvm/versions/node/v4.3.2/bin"
 }

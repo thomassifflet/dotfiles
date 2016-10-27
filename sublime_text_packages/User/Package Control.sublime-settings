@@ -7,6 +7,7 @@
 	[
 		"AdvancedNewFile",
 		"Babel",
+		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"Elm Language Support",
 		"Emmet",
@@ -21,10 +22,12 @@
 		"Package Control",
 		"Pug",
 		"Rust",
-		"SCSS",
+		"Sass",
 		"Seti_UI",
 		"SideBarEnhancements",
+		"SublimeGit",
 		"SublimeLinter",
+		"SublimeLinter-contrib-elm-make",
 		"SublimeLinter-contrib-eslint",
 		"TOML",
 		"Vue Syntax Highlight"

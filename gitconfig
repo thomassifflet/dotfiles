@@ -12,6 +12,7 @@
 	co = checkout
 	br = branch
 	f = fetch -pv
+	l = log --oneline --graph
 [ui]
 	colors = true
 [core]

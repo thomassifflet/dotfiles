@@ -40,6 +40,9 @@ if [ -e "/usr/local/bin/rbenv" ] ; then
   eval "$(rbenv init -)"
 fi
 
+# Only load Liquid Prompt in interactive shells, not from a script or from scp
+[[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
+
 # Configure Docker bash completion
 export DOCKER_COMPLETION_SHOW_NETWORK_IDS="no"
 export DOCKER_COMPLETION_SHOW_IMAGE_IDS="no"
