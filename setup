@@ -43,8 +43,8 @@ fi
 # Reset everything
 . $HOME/.bashrc
 
-echo "Installing the latest version of node..."
-nvm install stable
-nvm alias default stable
+echo "Installing the latest LTS version of node..."
+nvm install --lts
+nvm alias default $(node --version)
 
 echo "Your computer is setup!"
