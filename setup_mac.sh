@@ -40,7 +40,7 @@ if [ -f $DOTFILES_DIR/bash_local ]; then
   ln -s $DOTFILES_DIR/bash_local $HOME/.bash_local
 fi
 
-# Reset everything
+echo "Resetting the environment..."
 . $HOME/.bashrc
 
 echo "Installing the latest LTS version of node..."
