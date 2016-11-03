@@ -18,8 +18,8 @@ brew cask install firefox google-chrome iterm2
 echo "Downloading Docker for Mac..."
 curl https://download.docker.com/mac/stable/Docker.dmg > $HOME/Downloads/Docker_for_Mac.dmg
 hdiutil mount $HOME/Downloads/Docker_for_Mac.dmg
-sudo cp -R /Volumes/Sublime\ Text/Sublime\ Text.app /Applications
-hdiutil unmount /Volumes/Sublime\ Text/
+sudo cp -R /Volumes/Docker/Docker.app /Applications
+hdiutil unmount /Volumes/Docker
 
 echo "Downloading Sublime Text 3..."
 curl https://download.sublimetext.com/Sublime%20Text%20Build%203126.dmg > $HOME/Downloads/Sublime_Text_3.dmg
