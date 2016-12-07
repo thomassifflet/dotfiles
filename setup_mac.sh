@@ -8,6 +8,16 @@ defaults write com.apple.screensaver askForPassword 1
 echo "Installing Xcode make tools..."
 xcode-select --install
 
+echo "Symlinking dotfiles to home directory..."
+ln -s $DOTFILES_DIR/bash_profile $HOME/.bash_profile
+ln -s $DOTFILES_DIR/bashrc $HOME/.bashrc
+ln -s $DOTFILES_DIR/gitconfig $HOME/.gitconfig
+ln -s $DOTFILES_DIR/gemrc $HOME/.gemrc
+
+if [ -f $DOTFILES_DIR/bash_local ]; then
+  ln -s $DOTFILES_DIR/bash_local $HOME/.bash_local
+fi
+
 echo "Downloading homebrew and packages..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -30,15 +40,6 @@ hdiutil unmount /Volumes/Sublime\ Text/
 echo "Symlinking Sublime Text Packages so Sublime Text can find them..."
 ln -sF $DOTFILES_DIR/sublime_text_packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
 
-echo "Symlinking dotfiles to home directory..."
-ln -s $DOTFILES_DIR/bash_profile $HOME/.bash_profile
-ln -s $DOTFILES_DIR/bashrc $HOME/.bashrc
-ln -s $DOTFILES_DIR/gitconfig $HOME/.gitconfig
-ln -s $DOTFILES_DIR/gemrc $HOME/.gemrc
-
-if [ -f $DOTFILES_DIR/bash_local ]; then
-  ln -s $DOTFILES_DIR/bash_local $HOME/.bash_local
-fi
 
 echo "Resetting the environment..."
 . $HOME/.bashrc
