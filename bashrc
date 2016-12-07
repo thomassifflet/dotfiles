@@ -43,11 +43,6 @@ fi
 # Only load Liquid Prompt in interactive shells, not from a script or from scp
 [[ $- = *i* ]] && source ~/liquidprompt/liquidprompt
 
-# Configure Docker bash completion
-export DOCKER_COMPLETION_SHOW_NETWORK_IDS="no"
-export DOCKER_COMPLETION_SHOW_IMAGE_IDS="no"
-export DOCKER_COMPLETION_SHOW_TAGS="yes"
-
 # Customize prompt
 # export PS1='\u:\W$(__docker_machine_ps1 " [%s]") $>'
 export PS1='\W $>'
