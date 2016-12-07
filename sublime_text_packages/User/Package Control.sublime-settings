@@ -9,6 +9,7 @@
 		"Babel",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
+		"Elixir",
 		"Elm Language Support",
 		"Emmet",
 		"Fix Mac Path",
@@ -18,6 +19,7 @@
 		"JavaScript & NodeJS Snippets",
 		"Javascript Beautify",
 		"Markdown Extended",
+		"nginx",
 		"NodeRequirer",
 		"Package Control",
 		"Pug",
@@ -29,6 +31,7 @@
 		"SublimeLinter",
 		"SublimeLinter-contrib-elm-make",
 		"SublimeLinter-contrib-eslint",
+		"Theme - Brogrammer",
 		"TOML",
 		"Vue Syntax Highlight"
 	]
