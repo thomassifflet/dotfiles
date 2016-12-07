@@ -3,7 +3,6 @@
 DOTFILES_DIR=$(pwd)
 
 echo "Setting your default settings for the system..."
-defaults write com.apple.screensaver askForPassword 1
 
 echo "Installing Xcode make tools..."
 xcode-select --install
@@ -23,23 +22,16 @@ echo "Downloading homebrew and packages..."
 
 brew update
 brew install git bash-completion trash tree nvm
-brew cask install firefox google-chrome iterm2
+brew cask install firefox google-chrome iterm2 sublime-text
+
+echo "Symlinking Sublime Text Packages so Sublime Text can find them..."
+ln -sF $DOTFILES_DIR/sublime_text_packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
 
 echo "Downloading Docker for Mac..."
 curl https://download.docker.com/mac/stable/Docker.dmg > $HOME/Downloads/Docker_for_Mac.dmg
 hdiutil mount $HOME/Downloads/Docker_for_Mac.dmg
 sudo cp -R /Volumes/Docker/Docker.app /Applications
 hdiutil unmount /Volumes/Docker
-
-echo "Downloading Sublime Text 3..."
-curl https://download.sublimetext.com/Sublime%20Text%20Build%203126.dmg > $HOME/Downloads/Sublime_Text_3.dmg
-hdiutil mount $HOME/Downloads/Sublime_Text_3.dmg
-sudo cp -R /Volumes/Sublime\ Text/Sublime\ Text.app /Applications
-hdiutil unmount /Volumes/Sublime\ Text/
-
-echo "Symlinking Sublime Text Packages so Sublime Text can find them..."
-ln -sF $DOTFILES_DIR/sublime_text_packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
-
 
 echo "Resetting the environment..."
 . $HOME/.bashrc
