@@ -6,7 +6,9 @@
 	"installed_packages":
 	[
 		"AdvancedNewFile",
+		"Agila Theme",
 		"Babel",
+		"DocBlockr",
 		"Dockerfile Syntax Highlighting",
 		"EditorConfig",
 		"Elixir",
