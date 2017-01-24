@@ -17,3 +17,4 @@
 	colors = true
 [core]
 	excludesfile = /Users/kon8883/.gitignore_global
+	fileMode = false

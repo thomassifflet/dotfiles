@@ -21,11 +21,21 @@ echo "Downloading homebrew and packages..."
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 brew update
-brew install git bash-completion trash tree nvm
+brew install git bash-completion trash tree
 brew cask install firefox google-chrome iterm2 sublime-text
 
+echo “Downloading nvm…”
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.0/install.sh | bash
+
+echo "Installing liquidprompt"
+git clone https://github.com/nojhan/liquidprompt.git $HOME/liquidprompt
+source $HOME/liquidprompt/liquidprompt
+
 echo "Symlinking Sublime Text Packages so Sublime Text can find them..."
+mkdir -p $HOME/Library/Application\ Support/Sublime\ Text\ 3
 ln -sF $DOTFILES_DIR/sublime_text_packages $HOME/Library/Application\ Support/Sublime\ Text\ 3/Packages
+mkdir -p $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages
+ln -sF $DOTFILES_DIR/Package\ Control.sublime-package $HOME/Library/Application\ Support/Sublime\ Text\ 3/Installed\ Packages/Package\ Control.sublime-package
 
 echo "Downloading Docker for Mac..."
 curl https://download.docker.com/mac/stable/Docker.dmg > $HOME/Downloads/Docker_for_Mac.dmg

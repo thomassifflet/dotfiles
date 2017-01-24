@@ -105,7 +105,10 @@
 	"hot_exit": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Dockerfile Syntax Highlighting",
+		"Rust Enhanced",
+		"Vintage",
+		"Vue Syntax Highlight"
 	],
 	"indent_guide_options":
 	[
